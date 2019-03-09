@@ -1,5 +1,10 @@
 ## Winery React Client
 
+### `Dependencies`
+
+Redux --> Global storage.
+Moment.js --> Manipulate times.
+
 In the project directory, you can run:
 
 ### `npm start`

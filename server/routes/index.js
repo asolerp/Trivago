@@ -1,21 +1,17 @@
 const express = require("express");
 const router = express.Router();
+const Wine = require('../models/Wine')
 
-const Parser = require("rss-parser");
-const parser = new Parser();
 
 /* GET home page */
-router.get("/", (req, res, next) => {});
+router.get("/", (req, res, next) => {
+
+});
 
 router.get("/wines", (req, res, next) => {
-  parser.parseURL("https://www.winespectator.com/rss/rss?t=dwp").then(feed => {
-    feed.items.forEach(item => {
-      console.log(item.categories);
-    });
-  });
-
-  // console.log("todo ok!")
-  // res.status(200).json({message: "todo ok!"})
+  Wine.find()
+  .then(wines => res.status(200).json(wines))
+  .catch(err => res.status(500).json({message: "Error fetching wines from the database."}))
 });
 
 module.exports = router;

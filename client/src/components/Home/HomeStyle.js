@@ -1,9 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-const HomeStyleComponent = styled.h1`
-  font-size: 1.5em;
+const HomeStyleComponent = styled.div`
   text-align: center;
-  color: palevioletred;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0 20%;
 `;
 
-export { HomeStyleComponent }
+export { HomeStyleComponent };

@@ -5,6 +5,7 @@ const wineSchema = new Schema({
 
 title: {type: String, unique: true},
 price: {type: Number},
+image: {type: String},
 pubDate: {type: Date},
 isoDate: {type: Date},
 link: {type: String},

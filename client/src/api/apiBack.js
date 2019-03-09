@@ -1,10 +1,16 @@
 import axios from "axios";
 
-const URL = "http://localhost:5000";
-
 const apiBack = {
-  async GetWines() {
-    return await axios.get(`${URL}/wines`);
+  baseURL: "http://localhost:5000",
+
+  async getAllWines() {
+    try {
+       const response = await axios.get(`${this.baseURL}/wines`);
+       return response;
+    } catch(e) {
+      return {message: "Something happened trying to catch wines.", e}
+    }
+
   }
 };
 

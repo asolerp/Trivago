@@ -10,7 +10,7 @@ const path = require("path");
 const cors = require("cors");
 const CronJob = require("cron").CronJob;
 const rssWine = require("./public/javascripts/rssWineUpdate");
-
+const imagesAPI = require('./public/javascripts/imagesAPI')
 
 // Node Job to get every day the list of wines
 
@@ -18,6 +18,7 @@ new CronJob(
   "* * */23 * * *",
   function() {
     rssWine.getListOfWines();
+    // imagesAPI.getImagesOfWine();
   },
   null,
   true
@@ -44,7 +45,7 @@ const app = express();
 app.use(
   cors({
     credentials: true,
-    origin: [`http://localhost:3001`]
+    origin: [`http://localhost:3000`]
   })
 );
 
@@ -57,7 +58,6 @@ app.use(cookieParser());
 // Express View engine setup
 
 app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
