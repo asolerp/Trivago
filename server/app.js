@@ -25,7 +25,7 @@ new CronJob(
 );
 
 mongoose
-  .connect("mongodb://localhost/winery", { useNewUrlParser: true })
+  .connect("mongodb://wine:wine1212@ds163835.mlab.com:63835/winerss", { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`

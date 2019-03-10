@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const WineCardStyle = styled.div`
-  /* width: 100vw; */
-  height: 100%;
   border-radius: 2px;
   padding: 0.5% 0.5%;
   margin: 0.5% 0%;
@@ -11,7 +9,7 @@ const WineCardStyle = styled.div`
   justify-content: space-between;
   box-shadow: 0px 0px 5px grey;
   font-family: "Roboto", sans-serif;
-
+  background: white;
   h1,
   h2,
   p {
@@ -48,7 +46,6 @@ const WineCardStyle = styled.div`
   }
 
   .imageContainer {
-    border-right: 1px solid #d8d8d8;
     width: 170px;
     height: 105px;
   }

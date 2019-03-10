@@ -4,6 +4,7 @@
 
 Redux --> Global storage.
 Moment.js --> Manipulate times.
+Lodash.js --> Manipulate collections & arrays
 
 In the project directory, you can run:
 

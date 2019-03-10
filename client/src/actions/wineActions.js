@@ -3,11 +3,13 @@ import {
 } from './types'
 
 import apiBack from "../api/apiBack";
+import wineFilters from '../utils/wineFilters'
 
 export const getListWine = () => {
   return async dispatch => {
     const wines =  await apiBack.getAllWines()
-    return dispatch({type: WINES_LIST, payload: wines.data})
+    const winesDay = wineFilters.getWineDay(wines.data)
+    return dispatch({type: WINES_LIST, payload: winesDay})
     // .then(movies => {
     //   return dispatch({ type: MOVIES_LIST, payload: movies.data });
     // })

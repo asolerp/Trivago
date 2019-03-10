@@ -21,7 +21,7 @@ const WineCard = props => {
         </div>
         <div className="wineBlock">
           <p>
-            <FaWineGlassAlt /> Wine's Brand
+            <FaWineGlassAlt /> Wine Brand
           </p>
           <h2 className="title">{props.item.title}</h2>
         </div>
