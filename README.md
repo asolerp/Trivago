@@ -34,10 +34,12 @@ I have make two types of tests, react jest for the front and Mocha & Chai for th
 #### `Frontend dependences installed`
 
 Redux --> Global storage. I think is the best way to manage the state.
+
 Moment.js --> Manipulate times.
 
 
 ##### `Backend dependences installed`
 
 rss-parser --> A small library for turning RSS XML feeds into JavaScript objects.
+
 node-schedule -->  Cron-like and not-cron-like job scheduler for Node.js
