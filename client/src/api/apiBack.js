@@ -1,4 +1,5 @@
 import axios from "axios";
+import "@babel/polyfill";
 
 const apiBack = {
   baseURL: "http://localhost:5000",

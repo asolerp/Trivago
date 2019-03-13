@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import { NavBarStyle } from './NavBarStyle'
+import { NavBarStyle } from "./NavBarStyle";
+import NavCart from "./NavCart/NavCart";
 
 const NavBar = props => {
-return (
+  return (
     <NavBarStyle>
-        <h1>Wine RSS</h1>
+      <h1>Wine RSS</h1>
+      <NavCart />
     </NavBarStyle>
-)
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

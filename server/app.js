@@ -11,6 +11,8 @@ const cors = require("cors");
 const CronJob = require("cron").CronJob;
 const rssWine = require("./public/javascripts/rssWineUpdate");
 const imagesAPI = require('./public/javascripts/imagesAPI')
+const config = require('config');
+const morgan = require('morgan');
 
 // Node Job to get every day the list of wines
 
@@ -25,7 +27,7 @@ new CronJob(
 );
 
 mongoose
-  .connect("mongodb://wine:wine1212@ds163835.mlab.com:63835/winerss", { useNewUrlParser: true })
+  .connect(process.env.DB, { useNewUrlParser: true })
   .then(x => {
     console.log(
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
@@ -49,6 +51,11 @@ app.use(
   })
 );
 
+if(config.util.getEnv('NODE_ENV') !== 'test') {
+  //use morgan to log at command line
+  app.use(morgan('combined')); 
+}
+
 // Middleware Setup
 app.use(logger("dev"));
 app.use(bodyParser.json());
@@ -62,7 +69,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(favicon(path.join(__dirname, "public", "images", "favicon.ico")));
 
 // default value for title local
-app.locals.title = "Express - Generated with IronGenerator";
+app.locals.title = "Trivago";
 
 const index = require("./routes/index");
 app.use("/", index);

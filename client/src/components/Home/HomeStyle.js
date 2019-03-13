@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 const HomeStyleComponent = styled.div`
+  position: relative;
   text-align: center;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   box-sizing: border-box;
-  padding: 0 20%;
+  padding: 5% 20%;
   padding-top: 1%;
-  background: #EAEBEC;
+  background: #eaebec;
   /* height: 100vh; */
 
   .filterTitle {
@@ -16,7 +17,6 @@ const HomeStyleComponent = styled.div`
     font-size: 15px;
     font-family: "Roboto", sans-serif;
   }
-
 `;
 
 export { HomeStyleComponent };
