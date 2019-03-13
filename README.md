@@ -11,12 +11,12 @@ There are two sections, one with the daily waines and another one with the rest.
 
 ### `HOW TO`
 
-## `npm start - client folder`
+#### `npm start - client folder`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## `npm start - server folder`
+####`npm start - server folder`
 
 Server will be opened on PORT: 5000
 
