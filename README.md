@@ -11,13 +11,6 @@ There are two sections, one with the daily waines and another one with the rest.
 
 ### `HOW TO`
 
-First thing you have to do is to create .env file on server folder with the following info:
-
-PORT=5000
-ENV=development
-DB=mongodb://wine:wine1212@ds163835.mlab.com:63835/winerss
-NODE_ENV=development
-
 #### `npm start - client folder`
 
 Runs the app in the development mode.<br>
